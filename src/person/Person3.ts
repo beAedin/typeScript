@@ -1,0 +1,13 @@
+// Equal to Person2.ts
+// Person2 is simple than Person3.ts
+class Person3 {
+    name: string;
+    age?: number;
+    constructor(name: string, age?: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+let jack3: Person3 = new Person3("Jack", 32);
+console.log(jack3);

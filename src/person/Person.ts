@@ -1,18 +1,14 @@
-let MAX_AGE = 100;
+import * as U from "./../utils/makeRandomNumber";
+import IPerson from "./IPerson";
 
-export interface IPerson {
-    name: string;
-    age: number;
-}
-class Person implements IPerson {
+export default class Person implements IPerson {
     constructor(public name: string, public age: number) {}
 }
 
-function makeRandomNumber(max: number = MAX_AGE): number {
-    return Math.ceil(Math.random() * max);
-}
-
-export const makePerson = (name: string, age: number = makeRandomNumber()) => ({
+export const makePerson = (
+    name: string,
+    age: number = U.makeRandomNumber()
+): IPerson => ({
     name,
     age,
 });
